@@ -1,0 +1,117 @@
+$poppins: "Poppins", sans-serif;
+$orbitron: "Orbitron", sans-serif;
+$bgcolor: #0d0d0d;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bgcolor;
+  color: white;
+  nav {
+    width: 100vw;
+    height: 20vh;
+    ul {
+      line-height: 20vh;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      li {
+        opacity: 0;
+        animation: up 1s forwards ease 2s;
+        padding-left: 3em;
+        padding-right: 3em;
+        float: left;
+        font-family: $poppins;
+        font-size: 0.9em;
+        letter-spacing: 1em;
+        font-weight: 300;
+        display: flex;
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .hero {
+    img {
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+      animation: up-down 2s infinite ease 300ms;
+    }
+    h1 {
+      opacity: 0;
+      animation: up 1s forwards ease-in-out 1s;
+      width: 60%;
+      position: absolute;
+      top: 50%;
+      left: 60%;
+      transform: translate(-50%, -50%);
+      font-size: 4em;
+      font-family: $orbitron;
+      span {
+        color: transparent;
+        -webkit-text-stroke: 1px white;
+      }
+    }
+  }
+
+  button{
+    background-color: transparent;
+    border: none;
+  }
+
+  .share {
+    opacity: 0;
+    margin-left: 12%;
+    margin-top: 35%;
+    cursor: pointer;
+    animation: up-btn forwards 2s ease 2.6s;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@keyframes up {
+  0% {
+    opacity: 0;
+    margin-top: 5%;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0%;
+  }
+}
+@keyframes up-btn {
+  0% {
+    opacity: 0;
+    margin-top: 36%;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 35%;
+  }
+}
+@keyframes up-down {
+  0% {
+    opacity: 1;
+    margin-top: 0%;
+  }
+  50% {
+    margin-top: -1%;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0%;
+  }
+}

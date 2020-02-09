@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0d;
+}
+
+.links {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Orbitron";
+}
+
+.links a {
+  padding-bottom: 5%;
+  padding-left: 5%;
+  width: fit-content;
+  text-decoration: none;
+  color: transparent;
+  font-weight: 900;
+  font-size: 6em;
+  -webkit-text-stroke: 1px white;
+  animation-fill-mode: both;
+}
+
+a:nth-child(4) {
+  padding-bottom: 0;
+}
+
+a:hover {
+  color: white;
+  -webkit-text-stroke: 0px;
+}
